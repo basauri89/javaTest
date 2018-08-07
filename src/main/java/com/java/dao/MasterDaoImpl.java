@@ -9,7 +9,7 @@ public class MasterDaoImpl implements MasterDao {
 
     private final Connection conn = ConnectToDatabase.createConnection();
     private final String SQL_CREATE_USER = "INSERT INTO sherpa.Master (userName) VALUES (?)";
-    private final String SQL_GET_USER = "SELECT userName FROM sherpa.Master WHERE id=?";
+    private final String SQL_GET_USER = "SELECT * FROM sherpa.Master WHERE userName=?";
 
     @Override
     public int createUser(Master master) {
@@ -31,13 +31,13 @@ public class MasterDaoImpl implements MasterDao {
 
     /***
      * Simple query Against the database In order to check if a User already exists
-     * @param master We pass a master Object to the method
+     * @param userName We pass a userName
      * @return Returns the user ID if exist. Otherwise returns -1 (Invalid Index)
      */
     @Override
-    public int getExistingUser(Master master) {
+    public int getExistingUser(String userName) {
         try (PreparedStatement statement = conn.prepareStatement(SQL_GET_USER)){
-            statement.setInt(1, master.getId());
+            statement.setString(1, userName);
             try (ResultSet rs = statement.executeQuery()) {
                 return rs.getInt(1);
             }

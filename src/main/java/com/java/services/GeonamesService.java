@@ -3,6 +3,7 @@ package com.java.services;
 import com.java.models.GeonamesResponse;
 
 import javax.annotation.PostConstruct;
+import javax.ejb.Stateless;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;

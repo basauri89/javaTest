@@ -1,15 +1,13 @@
 package com.java.models;
 
 public class Master {
+
     private int id;
+
     private String userName;
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getUserName() {
