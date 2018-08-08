@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public class ConnectToDatabase {
 
     private final static String user = "root";
-    private final static String pswd = "zewikSDK001!";
+    private final static String pswd = "admin";
 
 
     public static Connection createConnection() {
