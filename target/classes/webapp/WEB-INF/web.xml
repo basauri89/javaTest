@@ -7,7 +7,7 @@
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>com.sherpa</param-value>
+            <param-value>java.com.sherpa</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
@@ -21,7 +21,7 @@
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>javax.ws.rs.Application</param-name>
-            <param-value>com.sherpa.MainApplication</param-value>
+            <param-value>java.com.sherpa.MainApplication</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>

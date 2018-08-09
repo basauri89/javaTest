@@ -33,7 +33,7 @@ public class RegisterResource {
      * @return Simple JSON object when successful
      */
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
     public Response registerUser(@QueryParam("username") String userName, @QueryParam("postCode") String postCode) {
 
         //Invalid request
@@ -45,17 +45,11 @@ public class RegisterResource {
         if (response.getPostalCodes().isEmpty()) return Response.status(Response.Status.CONFLICT).build();
 
         //Create user and insert in the database (Service will return existing user ID if it already exists)
-        Master user = new Master();
-        user.setUserName(userName);
-        int userID = masterService.createNewUser(user);
+        int userID = masterService.createNewUser(userName);
+        //Once user created create an entry in Details table passing the userID for the Foreign key
+        detailsService.createDetails(postCode, userID, response.getCityFromFirstEntry());
 
-        Details details = new Details();
-        details.setCity(response.getCityFromFirstEntry());
-        details.setPostCode(postCode);
-        details.setUserID(userID);
-
-        detailsService.createDetails(details);
-
-        return Response.ok().build();
+        //Success
+        return Response.ok("Success!").build();
     }
 }

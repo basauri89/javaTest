@@ -11,8 +11,10 @@ public class MasterDBService {
         return masterDaoImpl.getExistingUser(userName);
     }
 
-    public int createNewUser(Master master){
-        int existingUserId = getExistingUserId(master.getUserName());
-        return existingUserId == -1 ? masterDaoImpl.createUser(master) : existingUserId;
+    public int createNewUser(String userName){
+        Master user = new Master();
+        user.setUserName(userName);
+        int existingUserId = getExistingUserId(user.getUserName());
+        return existingUserId == -1 ? masterDaoImpl.createUser(user) : existingUserId;
     }
 }
