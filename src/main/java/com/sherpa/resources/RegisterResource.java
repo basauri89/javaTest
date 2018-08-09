@@ -1,8 +1,6 @@
 package java.com.sherpa.resources;
 
-import java.com.sherpa.models.Details;
 import java.com.sherpa.models.GeonamesResponse;
-import java.com.sherpa.models.Master;
 import java.com.sherpa.services.DetailsDBService;
 import java.com.sherpa.services.GeonamesService;
 import java.com.sherpa.services.MasterDBService;
