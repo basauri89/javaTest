@@ -1,6 +1,5 @@
 package com.sherpa.resources;
 
-import com.sherpa.resources.RegisterResource;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Assert;
