@@ -1,7 +1,7 @@
-package java.com.sherpa.dao;
+package com.sherpa.dao;
 
-import java.com.sherpa.Controller.ConnectToDatabase;
-import java.com.sherpa.models.Master;
+import com.sherpa.connector.ConnectToDatabase;
+import com.sherpa.models.Master;
 
 import java.sql.*;
 

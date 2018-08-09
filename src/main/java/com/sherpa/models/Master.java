@@ -1,4 +1,4 @@
-package java.com.sherpa.models;
+package com.sherpa.models;
 
 public class Master {
 

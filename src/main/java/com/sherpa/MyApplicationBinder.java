@@ -1,8 +1,8 @@
-package java.com.sherpa;
+package com.sherpa;
 
-import java.com.sherpa.services.DetailsDBService;
-import java.com.sherpa.services.GeonamesService;
-import java.com.sherpa.services.MasterDBService;
+import com.sherpa.services.DetailsDBService;
+import com.sherpa.services.GeonamesService;
+import com.sherpa.services.MasterDBService;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
 
 public class MyApplicationBinder extends AbstractBinder {

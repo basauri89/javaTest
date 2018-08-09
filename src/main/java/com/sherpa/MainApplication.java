@@ -1,4 +1,5 @@
-package java.com.sherpa;
+package com.sherpa;
+
 
 import org.glassfish.jersey.server.ResourceConfig;
 

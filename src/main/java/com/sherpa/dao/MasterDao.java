@@ -1,6 +1,6 @@
-package java.com.sherpa.dao;
+package com.sherpa.dao;
 
-import java.com.sherpa.models.Master;
+import com.sherpa.models.Master;
 
 public interface MasterDao {
     int createUser(Master master);

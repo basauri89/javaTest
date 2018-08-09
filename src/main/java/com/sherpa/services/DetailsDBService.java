@@ -1,7 +1,7 @@
-package java.com.sherpa.services;
+package com.sherpa.services;
 
-import java.com.sherpa.dao.DetailsDaoImpl;
-import java.com.sherpa.models.Details;
+import com.sherpa.dao.DetailsDaoImpl;
+import com.sherpa.models.Details;
 
 public class DetailsDBService {
 

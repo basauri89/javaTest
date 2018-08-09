@@ -1,6 +1,6 @@
-package java.com.sherpa.services;
+package com.sherpa.services;
 
-import java.com.sherpa.models.GeonamesResponse;
+import com.sherpa.models.GeonamesResponse;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;

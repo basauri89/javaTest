@@ -1,7 +1,7 @@
-package java.com.sherpa.services;
+package com.sherpa.services;
 
-import java.com.sherpa.dao.MasterDaoImpl;
-import java.com.sherpa.models.Master;
+import com.sherpa.dao.MasterDaoImpl;
+import com.sherpa.models.Master;
 
 public class MasterDBService {
 

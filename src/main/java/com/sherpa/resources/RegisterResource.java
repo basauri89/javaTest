@@ -1,9 +1,9 @@
-package java.com.sherpa.resources;
+package com.sherpa.resources;
 
-import java.com.sherpa.models.GeonamesResponse;
-import java.com.sherpa.services.DetailsDBService;
-import java.com.sherpa.services.GeonamesService;
-import java.com.sherpa.services.MasterDBService;
+import com.sherpa.models.GeonamesResponse;
+import com.sherpa.services.DetailsDBService;
+import com.sherpa.services.GeonamesService;
+import com.sherpa.services.MasterDBService;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
