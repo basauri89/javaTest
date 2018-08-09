@@ -9,16 +9,16 @@ import java.util.logging.Logger;
 
 public class ConnectToDatabase {
 
+    private final static String DB = "jdbc:mysql://localhost:3306/Sherpa?useSSL=false&allowPublicKeyRetrieval=true";
     private final static String user = "root";
-    private final static String pswd = "admin";
+    private final static String pswd = "zewikSDK001!";
 
 
     public static Connection createConnection() {
         Connection conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String dbUrl = "jdbc:mysql://localhost:3306/Sherpa?useSSL=false";
-            conn = DriverManager.getConnection(dbUrl, user, pswd);
+            conn = DriverManager.getConnection(DB, user, pswd);
         } catch (SQLException ex) {
             Logger.getLogger(ConnectToDatabase.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException e) {
