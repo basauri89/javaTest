@@ -24,4 +24,10 @@ public class GeonamesServiceTest {
         GeonamesResponse response2 = geonamesService.getCityFromPostCode("48001");
         Assert.assertEquals("Bilbao", response2.getCityFromFirstEntry());
     }
+
+    @Test
+    public void getCityWithIncorrectPostCode(){
+        GeonamesResponse response = geonamesService.getCityFromPostCode("48");
+        Assert.assertTrue(response.getPostalCodes().isEmpty());
+    }
 }
