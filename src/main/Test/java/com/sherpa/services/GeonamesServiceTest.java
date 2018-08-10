@@ -19,9 +19,9 @@ public class GeonamesServiceTest {
     @Test
     public void getCityFromPostCode() {
         GeonamesResponse response = geonamesService.getCityFromPostCode("48991");
-        Assert.assertTrue(response.getCityFromFirstEntry().equals("Getxo"));
+        Assert.assertEquals("Getxo", response.getCityFromFirstEntry());
 
         GeonamesResponse response2 = geonamesService.getCityFromPostCode("48001");
-        Assert.assertTrue(response2.getCityFromFirstEntry().equals("Bilbao"));
+        Assert.assertEquals("Bilbao", response2.getCityFromFirstEntry());
     }
 }
