@@ -11,7 +11,7 @@ public class ConnectToDatabase {
 
     private final static String DB = "jdbc:mysql://localhost:3306/Sherpa?useSSL=false&allowPublicKeyRetrieval=true";
     private final static String user = "root";
-    private final static String pswd = "zewikSDK001!";
+    private final static String pswd = "admin!";
 
 
     public static Connection createConnection() {

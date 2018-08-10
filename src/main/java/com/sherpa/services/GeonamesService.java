@@ -9,6 +9,8 @@ import javax.ws.rs.core.MediaType;
 
 public class GeonamesService {
     private static final String USERNAME = "basauri89";
+    //Just cities in Spain
+    private static final String COUNTRY = "ES";
     private static final String ENDPOINT = "http://api.geonames.org/postalCodeSearchJSON";
     private Client client;
     private WebTarget target;
@@ -17,7 +19,8 @@ public class GeonamesService {
         this.client = ClientBuilder.newClient();
         target = client.target(ENDPOINT)
                 .queryParam("maxRows", "10")
-                .queryParam("username", USERNAME);
+                .queryParam("username", USERNAME)
+                .queryParam("country", COUNTRY);
     }
 
     public GeonamesResponse getCityFromPostCode(String postCode) {

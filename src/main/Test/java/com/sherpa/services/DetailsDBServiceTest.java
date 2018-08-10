@@ -4,10 +4,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.transaction.Transactional;
 import javax.validation.constraints.AssertTrue;
 
 import static org.junit.Assert.*;
 
+@Transactional
 public class DetailsDBServiceTest {
 
     private DetailsDBService detailsDBService;
